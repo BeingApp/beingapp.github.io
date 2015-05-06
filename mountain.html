@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Being</title>
+
+    <link rel="stylesheet" href="stylesheets/styles_mountain.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<section class="header">
+    <img src="http://lmpic.qiniudn.com/img.Mountain.jpg" alt=""/>
+</section>
+<div class="wrapper">
+    <section class="main-content Source-Han-Light">
+        <p>谢谢你能看着我，请给我一点点时间，来试着为你打造一个安静的空间：看这个世界，并分享你的故事。</p>
+
+        <p>我叫Being，是一个图片聊天空间，希望这里可以成为让你和志同道合的人轻松交流的地方。无论是藏在街头巷尾中的美食，还是水天一色的旖丽风光，抑或是清晨街角卖着豆汁的婆婆……这些场景、故事、人，都将展开在你眼前，述说生活的种种与万千世相。于当下，Being望你幸福。</p>
+
+        <p>Being myself.</p>
+    </section>
+
+    <section class="footer">
+        <a href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=980950116&mt=8"><img class="download-icon"
+                                                                                                         src="http://lmpic.qiniudn.com/icon.ios_download.png" alt="iOS download"/></a>
+        <a href="#"><img class="download-icon" src="http://lmpic.qiniudn.com/icon.android_download.png" alt="Android download"/></a>
+    </section>
+</div>
+<script src="javascripts/scale.fix.js"></script>
+
+</body>
+
+<script type="text/javascript" src="http://www.youziku.com/UserDownFile/jquery.min.js"></script>
+<script type="text/javascript" src="http://www.youziku.com/UserDownFile/jquery.md5.js"></script>
+<script type="text/javascript">
+    function youziku46865() {
+        var resultStr = $(".Source-Han-Light").text();
+        var md5 = "";
+        resultStr = Trim(resultStr);
+        resultStr = SelectWord(resultStr);
+        md5 = $.md5("649b07607b4a42be87239a2ac3964c04"+"Source-Han-Light" + resultStr);
+        $.getJSON("http://www.youziku.com/webfont/CSSPOST?jsoncallback=?", { "id": md5, "guid": "649b07607b4a42be87239a2ac3964c04", "type": "5" }, function (json) {
+            if (json.result == 0) {/*alert("需要生成");*/
+                $.post("http://www.youziku.com/webfont/PostCorsCreateFont", { "name": "Source-Han-Light", "gid": "649b07607b4a42be87239a2ac3964c04", "type": "5", "text": resultStr }, function (json) {
+                    if (json == "0") { /*alert("参数不对");*/
+                    } else if (json == "2") {/*alert("超过每日生成字体数的上限");*/
+                    } else if (json == "3") { /*alert("当前正在生成请稍后");*/
+                    } else {/*alert("正在生成");*/
+                    }
+                });
+            }
+            else {/*alert("下载css文件");*/
+                loadExtentFile("http://www.youziku.com/webfont/css?id=" + md5 + "&guid=" + "649b07607b4a42be87239a2ac3964c04" + "&type=5");
+            }
+        });
+    }
+    (function youziku() {
+        youziku46865();
+    })()
+</script>
+</html>

@@ -1,0 +1,163 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
+
+body {
+    padding:0;
+    margin: 0;
+    font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:#aaaaaa;
+    font-weight:300;
+    background-color: #000000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color:#222;
+    margin:0 0 20px;
+}
+
+p, ul, ol, table, pre, dl {
+    margin:0 0 20px;
+}
+
+h1, h2, h3 {
+    line-height:1.1;
+}
+
+h1 {
+    font-size:28px;
+}
+
+h2 {
+    color:#393939;
+}
+
+h3, h4, h5, h6 {
+    color:#494949;
+}
+
+a {
+    color:#aeaeae;
+    font-weight:400;
+    text-decoration:none;
+}
+
+.wrapper {
+    width:860px;
+    margin:0 auto;
+}
+
+.header {
+    width: 100%;
+    padding: 0;
+    margin: 0 0 -20%;
+    background: #4c4c4c; /* Old browsers */
+    background: -moz-linear-gradient(top,  #4c4c4c 0%, #000000 78%, #000000 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4c4c4c), color-stop(78%,#000000), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #4c4c4c 0%,#000000 78%,#000000 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #4c4c4c 0%,#000000 78%,#000000 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #4c4c4c 0%,#000000 78%,#000000 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #4c4c4c 0%,#000000 78%,#000000 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
+}
+
+.main-content {
+    background-color: #000000;
+}
+
+.footer {
+    float: left;
+    width: 30%;
+    padding: 50px 20px;
+    text-align: center;
+    font-size: 32px;
+}
+
+.download-icon {
+    width: 100%;
+    max-width: 150px;
+}
+
+img {
+    max-width:100%;
+}
+
+section {
+    width:500px;
+    float:right;
+    padding: 0 20px 50px;
+}
+
+small {
+    font-size:11px;
+}
+
+@media print, screen and (max-width: 960px) {
+    .wrapper {
+        width:auto;
+        margin:0;
+    }
+}
+
+@media print, screen and (max-width: 830px) {
+    .main-content {
+        width: 60%;
+    }
+    .footer {
+        width: 28%;
+        font-size: 28px;
+    }
+}
+
+@media print, screen and (max-width: 720px) {
+    .main-content {
+        width: 60%;
+    }
+    .footer {
+        width: 25%;
+        font-size: 28px;
+    }
+}
+
+@media print, screen and (max-width: 540px) {
+    .main-content {
+        width: 60%;
+    }
+    .footer {
+        width: 23%;
+        font-size: 28px;
+    }
+}
+
+@media print, screen and (max-width: 480px) {
+    body {
+        padding:0;
+        margin: 0;
+    }
+
+    .header {
+        margin-bottom: -10%;
+    }
+
+    .main-content {
+        width: auto;
+    }
+
+    .footer {
+        width: 100%;
+        padding: 0 0 100px 0;
+    }
+
+    .download-icon {
+        max-width: 100px;
+        margin: 0 10px;
+    }
+}
+
+@media print {
+    body {
+        padding:0;
+        margin: 0;
+        font-size:12pt;
+        color: #dddddd;
+    }
+}

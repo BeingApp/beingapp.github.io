@@ -48,7 +48,7 @@ a {
 .header {
   width: 100%;
   padding: 0;
-  margin: 0 0 -20%;
+  margin: 0 0 0;
   background: #4c4c4c; /* Old browsers */
   background: -moz-linear-gradient(top,  #4c4c4c 0%, #000000 78%, #000000 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4c4c4c), color-stop(78%,#000000), color-stop(100%,#000000)); /* Chrome,Safari4+ */
@@ -66,10 +66,15 @@ a {
 
 .footer {
   float: left;
-  width: 25%;
-  padding: 50px 0;
+  width: 30%;
+  padding: 20px 20px;
   text-align: center;
   font-size: 32px;
+}
+
+.download-icon {
+  width: 100%;
+  max-width: 150px;
 }
 
 img {
@@ -88,11 +93,21 @@ small {
 
 @media print, screen and (max-width: 960px) {
   .header {
-    margin-bottom: -20%;
+    margin-bottom: 0;
   }
   .wrapper {
     width:auto;
     margin:0;
+  }
+}
+
+@media print, screen and (max-width: 830px) {
+  .main-content {
+    width: 60%;
+  }
+  .footer {
+    width: 28%;
+    font-size: 28px;
   }
 }
 
@@ -101,7 +116,17 @@ small {
     width: 60%;
   }
   .footer {
-    width: 30%;
+    width: 25%;
+    font-size: 28px;
+  }
+}
+
+@media print, screen and (max-width: 540px) {
+  .main-content {
+    width: 60%;
+  }
+  .footer {
+    width: 23%;
     font-size: 28px;
   }
 }
@@ -123,6 +148,11 @@ small {
   .footer {
     width: 100%;
     padding: 0 0 100px 0;
+  }
+
+  .download-icon {
+    max-width: 100px;
+    margin: 0 10px;
   }
 }
 
